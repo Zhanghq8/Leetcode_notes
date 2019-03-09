@@ -25,7 +25,11 @@ public:
 int main()
 {
 	Solution temp;
-    int num = 123;
-	int result = temp.reverse(num);
-	cout << "The reverse of " << num << " is: " << result << endl;
+    int num;
+    while (1) {
+        cout << "Enter the number you want to test: \n";
+        cin >> num;
+        int  result = temp.reverse(num);
+        cout << "The reverse of " << num << " is: " << result << endl;
+    }
 }
