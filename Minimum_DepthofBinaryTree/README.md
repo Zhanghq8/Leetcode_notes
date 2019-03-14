@@ -1,19 +1,17 @@
 ## Question
-Implement strStr().
+Given a binary tree, find its minimum depth.
 
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 
-- Example1:
-```
-Input: haystack = "hello", needle = "ll"
-Output: 2
-```
-- Example2:
-```
-Input: haystack = "aaaaa", needle = "bba"
-Output: -1
-```
 
-*Clarification:: 
-What should we return when needle is an empty string? This is a great question to ask during an interview.
-For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf(). *
+*Note: A leaf is a node with no children..*
+- Example:
+Given binary tree [3,9,20,null,null,15,7],
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+return its minimum depth = 2.
