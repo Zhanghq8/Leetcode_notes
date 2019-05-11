@@ -1,7 +1,5 @@
-// Insertion sort
 #include <iostream>
 #include <vector>
-#include <stack>
 
 using namespace std;
 
@@ -14,7 +12,7 @@ public:
             while (index > 0 && nums[index-1] > value) {
                 nums[index] = nums[index-1];
                 index -= 1;
-            }
+            }   
             nums[index] = value;
         }
         stack<int> vec;
