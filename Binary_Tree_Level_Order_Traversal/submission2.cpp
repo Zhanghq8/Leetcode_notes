@@ -14,21 +14,23 @@ using namespace std;
  */
 class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> result;
-        stack<TreeNode*> S;
-        TreeNode* current = root;
-        while (current != NULL || !S.empty()) {
-            while (current != NULL) {
-                S.push(current);
-                current = current->left;
-            }
-            current = S.top();
-            S.pop();
-            result.push_back(current->val);
-            current = current->right;
-        }
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> result;
+        levelorder(root, result, 0);
         return result;
     }
+private:
+    
+    void levelorder(TreeNode* root, vector<vector<int>>& element, int level) {
+        if (root == NULL) {
+            return;
+        }
+        if (level == element.size()) {
+            element.push_back(vector<int>());    
+        }
+        element[level].push_back(root->val);
+        levelorder(root->left, element, level+1);
+        levelorder(root->right, element, level+1);
+    }
+    
 };
-
