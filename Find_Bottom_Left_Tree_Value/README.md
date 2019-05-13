@@ -1,31 +1,30 @@
 ## Question
-Given a binary tree, determine if it is height-balanced.
+Given a binary tree, find the leftmost value in the last row of the tree.
 
-For this problem, a height-balanced binary tree is defined as:
-*Note:  A binary tree in which the depth of the two subtrees of every node never differ by more than 1.*
 - Example1:
 ```
-Given the following tree [3,9,20,null,null,15,7]:
+Input:
 
-    3
+    2
    / \
-  9  20
-    /  \
-   15   7
-Return true.
+  1   3
 
+Output:
+1
 ```
 - Example2:
 ```
-Given the following tree [1,2,2,3,3,null,null,4,4]:
+Input:
 
-       1
-      / \
-     2   2
-    / \
-   3   3
-  / \
- 4   4
-Return false.
+        1
+       / \
+      2   3
+     /   / \
+    4   5   6
+       /
+      7
+
+Output:
+7
 ```
 
