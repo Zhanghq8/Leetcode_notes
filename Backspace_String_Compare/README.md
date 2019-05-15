@@ -25,7 +25,7 @@ Input: S = "a#c", T = "b"
 Output: false
 Explanation: S becomes "c" while T becomes "b".
 ```
-*Note:
+*Note:*
 1. 1 <= S.length <= 200
 2. 1 <= T.length <= 200
 3. S and T only contain lowercase letters and '#' characters.  
