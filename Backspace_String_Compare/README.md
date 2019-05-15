@@ -28,6 +28,6 @@ Explanation: S becomes "c" while T becomes "b".
 *Note:
 1. 1 <= S.length <= 200
 2. 1 <= T.length <= 200
-3. S and T only contain lowercase letters and '#' characters.   
-Follow up:   
+3. S and T only contain lowercase letters and '#' characters.  
+*Follow up:   
 Can you solve it in O(N) time and O(1) space?*
