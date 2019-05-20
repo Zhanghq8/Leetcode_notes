@@ -22,14 +22,16 @@ public:
                 num_blue++;
             }
         }
-        for (int i=0; i<num_red; i++) {
-            nums[i] = 0;
-        }
-        for (int i=0; i<num_white; i++) {
-            nums[i+num_red] = 1;
-        }
-        for (int i=0; i<num_blue; i++) {
-            nums[i+num_red+num_white] = 2;
+        for (int i=0; i<nums.size(); i++) {
+            if (i<num_red) {
+                nums[i] = 0;
+            }
+            else if (i>=num_red && i<num_red+num_white) {
+                nums[i] = 1;
+            }
+            else {
+                nums[i] = 2;
+            }
         }
     }
 };
