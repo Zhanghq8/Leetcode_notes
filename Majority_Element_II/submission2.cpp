@@ -3,7 +3,8 @@
 
 using namespace std;
 
-// 
+// Boyer-Moore Majority Vote algorithm
+// We can only get two votes numbers using BM algorithm, then we verify if these two numbers meet the requirement.
 
 class Solution {
 public:
