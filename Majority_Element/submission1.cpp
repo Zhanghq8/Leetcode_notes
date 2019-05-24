@@ -16,6 +16,7 @@ public:
             }
             else if (nums[i] != result && count == 0) {
                 result = nums[i];
+                count++;
             }
             else if (nums[i] != result && count >=1) {
                 count--;
