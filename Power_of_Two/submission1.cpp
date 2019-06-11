@@ -18,7 +18,6 @@ public:
                 return false;
             }
             temp = temp / 2.0;
-            cout << temp;
             if ((int)temp == temp && temp <= 1) {
                 return true;
             }
