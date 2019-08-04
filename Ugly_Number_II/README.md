@@ -12,4 +12,4 @@ Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly
 ```
 # Note:
 - 1 is typically treated as an ugly number.
-- n does not exceed 1690.
+- n does not exceed 1690.  
