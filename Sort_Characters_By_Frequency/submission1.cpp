@@ -12,7 +12,7 @@ public:
         priority_queue<pair<int, char>> pq;
         for (int i=0; i<s.size(); i++) {
             umap[s[i]]++;
-        }
+        }   
         for (auto n:umap) {
             pq.push({n.second, n.first});
         }
