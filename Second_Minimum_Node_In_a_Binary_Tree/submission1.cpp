@@ -20,30 +20,22 @@ public:
         if (root == NULL) {
             return 0;
         }
+        int first_min = root->val;
+        int second_min = INT_MAX; 
         queue<TreeNode*> Q;
         Q.push(root);
         while (!Q.empty()) {
-            int length = Q.size()-1;
-            
-            while (length>=0) {
-                TreeNode* current = Q.front();
-                if (current->left != NULL) {
-                    Q.push(current->left);
-                }
-                if (current->right != NULL) {
-                    Q.push(current->right);
-                }
-                result.push_back(current->val);
-                Q.pop();
-                length--;
+            TreeNode* current = Q.front();
+            if (current->val > first && current->val < second) {
+                return current->val;
             }
-        }
-        int min = result[0];
-        sort(result.begin(), result.end());
-        for (int i=0; i<result.size(); i++) {
-            if (result[i] > min) {
-                return result[i];
+            if (current->left != NULL) {
+                Q.push(current->left);
             }
+            if (current->right != NULL) {
+                Q.push(current->right);
+            }
+            Q.pop();
         }
         return -1;
     }
