@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// BFS
+// DFS
 // track the index which start from at itself
 
 class Solution {
