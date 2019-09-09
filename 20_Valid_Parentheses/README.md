@@ -5,30 +5,31 @@ An input string is valid if:
 
 Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
-Note that an empty string is also considered valid.
 
-- Example1:
+# Example1:
 ```
 Input: "()"
 Output: true
 ```
-- Example2:
+# Example2:
 ```
 Input: "()[]{}"
 Output: true
 ```
-- Example3:
+# Example3:
 ```
 Input: "(]"
 Output: false
 ```
-- Example4:
+# Example4:
 ```
 Input: "([)]"
 Output: false
 ```
-- Example5:
+# Example5:
 ```
 Input: "{[]}"
 Output: true
 ```
+# Note:
+- Note that an empty string is also considered valid.

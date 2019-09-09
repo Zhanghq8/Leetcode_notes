@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Vector
+
 class Solution {
 public:
     bool isValid(string s) {
@@ -24,21 +26,3 @@ public:
         return temp.empty() ? true:false;
     }
 };
-
-int main()
-{
-
-    Solution temp;
-    string str;
-    while (1) {
-        cout << "Enter the string you want to test: \n";
-        cin >> str;
-        bool result = temp.isValid(str);
-        if (result == true) {
-            cout << str << " is valid" << endl;
-        }
-        else {
-            cout << str << " is not valid" << endl;
-        }
-    }
-}
