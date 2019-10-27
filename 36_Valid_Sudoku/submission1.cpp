@@ -17,8 +17,6 @@ public:
                 }
                 int index = board[i][j] - '1';
                 if (rowflag[index][i] || colflag[j][index] || cellflag[i/3*3+index/3][j/3*3+index%3]) {
-                    cout << rowflag[index][i] << colflag[j][index] << cellflag[i/3+index/3][j/3*2+index/3] << endl;
-                    cout << i << j << index<<endl;
                     return false;
                 }
                 rowflag[index][i] = true;
