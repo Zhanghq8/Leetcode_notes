@@ -3,33 +3,46 @@
 
 using namespace std;
 
-class Solution {
+class LRUCache {
 public:
-    int numDecodings(string s) {
-        if (s.empty() || s[0] == '0') {
-            return 0;
+    LRUCache(int capacity) {
+        max_size = capacity;
+    }
+    
+    int get(int key) {
+        auto itr = umap.find(key);
+        if (itr != umap.end()) {
+            cache.splice(cache.begin(), cache, itr->second);
+            return itr->second->second;
         }
-        unordered_map<string, int> umap;
-        umap[""] = 1;
-        return numWays(s, umap);
+        else {
+            return -1;
+        }
+    }
+    
+    void put(int key, int value) {
+        auto itr = umap.find(key);
+        if (itr != umap.end()) {
+            cache.erase(itr->second);
+        }
+        cache.push_front(make_pair(key, value));
+        umap[key] = cache.begin();
+        if (umap.size() > max_size) {
+            int k = cache.back().first;
+            cache.pop_back();
+            umap.erase(k);
+        }
+
     }
 private:
-    int numWays(string s, unordered_map<string, int>& umap) {
-        if (umap.count(s)) {
-            return umap[s];
-        }
-        if (s[0] == '0') {
-            return 0;
-        }
-        if (s.length() == 1) {
-            return 1;
-        }
-        int ways = numWays(s.substr(1), umap);
-        int prefix = stoi(s.substr(0, 2));
-        if (prefix <= 26) {
-            ways += numWays(s.substr(2), umap);
-        }
-        umap[s] = ways;
-        return ways;
-    }
+    unordered_map<int, list<pair<int,int>>::iterator> umap;
+    list<pair<int,int>> cache;
+    int max_size;
 };
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
