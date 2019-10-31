@@ -21,7 +21,7 @@ public:
         }
         queue<TreeNode*> Q;
         Q.push(root);
-        while (!Q.empty()) {
+        while (Q.empty() != true) {
             int length = Q.size()-1;
             vector<int> ele_samelevel;
             while (length>=0) {
