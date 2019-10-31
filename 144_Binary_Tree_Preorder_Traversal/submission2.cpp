@@ -22,7 +22,7 @@ public:
         }
         stack<TreeNode*> S;
         TreeNode* current = root;
-        while (!S.empty() || current) {
+        while (!S.empty() || current != NULL) {
             while (current) {
                 result.push_back(current->val);
                 S.push(current);
