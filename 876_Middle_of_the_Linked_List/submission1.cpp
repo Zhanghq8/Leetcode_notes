@@ -14,9 +14,6 @@ using namespace std;
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        if (!head) {
-            return head;
-        }
         ListNode* dummyNode = new ListNode(-1);
         dummyNode->next = head;
         ListNode* slowPtr = dummyNode;
