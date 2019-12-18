@@ -1,6 +1,7 @@
 ## Question
 Invert a binary tree.
-- Example:
+
+# Example:
 ```
 Input:
 
