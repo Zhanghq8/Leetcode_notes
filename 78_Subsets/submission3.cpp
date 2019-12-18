@@ -6,23 +6,18 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
-        vector<vector<int>> result = helper(nums, 0);
+        vector<vector<int>> result;
+        vector<int> output;
+        helper(result, output, nums, 0);
         return result;
     }
 private:
-    vector<vector<int>> helper(vector<int>& nums, int level) {
-        if (level == nums.size()) {
-            vector<vector<int>> result;
-            result.push_back({});
-            return result;
+    void helper(vector<vector<int>>& result, vector<int>& output, vector<int>& nums, int index) {
+        result.emplace_back(output);
+        for (int i=index; i<nums.size(); i++) {
+            output.push_back(nums[i]);
+            helper(result, output, nums, i+1);
+            output.pop_back();
         }
-        vector<vector<int>> lastRes = helper(nums, level+1);
-        vector<vector<int>> newRes = lastRes;
-        for (auto res : lastRes) {
-            res.push_back(nums[level]);
-            newRes.push_back(res);
-        }
-        return newRes;
     }
 };
-
