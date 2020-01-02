@@ -9,12 +9,11 @@ public:
         vector<vector<int>> result;
         vector<int> output;
         vector<bool> visited(nums.size(), false);
-        helper(result, output, visited, 0, nums);
+        helper(result, output, visited, nums);
         return result;
     }
 private:
-    void helper(vector<vector<int>>& result, vector<int>& output, vector<bool>& visited, 
-                int index, vector<int>& nums) {
+    void helper(vector<vector<int>>& result, vector<int>& output, vector<bool>& visited, vector<int>& nums) {
         if (output.size() == nums.size()) {
             result.emplace_back(output);
             return;
@@ -25,7 +24,7 @@ private:
             }
             visited[i] = true;
             output.push_back(nums[i]);
-            helper(result, output, visited, i+1, nums);
+            helper(result, output, visited, nums);
             output.pop_back();
             visited[i] = false;
         }
