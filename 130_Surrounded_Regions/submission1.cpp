@@ -6,20 +6,20 @@ using namespace std;
 class Solution {
 public:
     void solve(vector<vector<char>>& board) {
-        if (board.empty() == true || board[0].empty() == true) {
+        if (board.empty()) {
             return;
         }
-        vector<vector<bool>> visited(board.size(), vector<bool> (board[0].size(), false));
-        for (int i=0; i<board.size(); i++) {
-            for (int j=0; j<board[i].size(); j++) {
-                if ((i==0 || i==board.size()-1 || j==0 || j==board[i].size()-1) && board[i][j] == 'O') {
-                    cout << i << " " << j << endl;
-                    dfs_border(board, visited, i, j);
+        int row = board.size();
+        int col = board[0].size();
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (board[i][j] == 'O' && (i == 0 || j == 0 || i == row - 1 || j == col - 1)) {
+                    dfs(i, j, board, row, col);
                 }
             }
         }
-        for (int i=0; i<board.size(); i++) {
-            for (int j=0; j<board[i].size(); j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 if (board[i][j] == 'O') {
                     board[i][j] = 'X';
                 }
@@ -28,24 +28,17 @@ public:
                 }
             }
         }
+        return;
     }
 private:
-    void dfs_border(vector<vector<char>>& board, vector<vector<bool>>& visited, int x, int y) {
-        if (x<0 || y<0 || x>=board.size() || y>=board[x].size()) {
+    vector<vector<int>> dirs = {{-1,0}, {1,0}, {0,-1}, {0,1}};
+    void dfs(int x, int y, vector<vector<char>>& board, int rowMax, int colMax) {
+        if (x < 0 || x >= rowMax || y < 0 || y >= colMax || board[x][y] != 'O') {
             return;
         }
-        if (board[x][y] == 'X') {
-            return;
-        }
-        if (visited[x][y] == true) {
-            return;
-        }
-        visited[x][y] = true;
         board[x][y] = '$';
-        dfs_border(board, visited, x-1, y);
-        dfs_border(board, visited, x+1, y);
-        dfs_border(board, visited, x, y-1);
-        dfs_border(board, visited, x, y+1);
+        for (int i = 0; i < 4; i++) {
+            dfs(x+dirs[i][0], y+dirs[i][1], board, rowMax, colMax);    
+        }
     }
-    
 };
