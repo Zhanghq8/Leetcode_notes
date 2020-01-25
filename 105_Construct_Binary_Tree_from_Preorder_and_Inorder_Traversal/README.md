@@ -1,4 +1,4 @@
-## Question
+# Question
 Given preorder and inorder traversal of a tree, construct the binary tree.
 
 For example, given
@@ -16,5 +16,5 @@ Return the following binary tree:
    15   7
 ```
 
-# Note:
+## Note:
 - You may assume that duplicates do not exist in the tree.

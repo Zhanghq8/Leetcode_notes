@@ -16,24 +16,22 @@ using namespace std;
 class Solution {
 public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        int pl = 0, il = 0;
-        int pr = preorder.size()-1, ir = inorder.size()-1;
-        return dfs(preorder, pl, pr, inorder, il, ir);
+        unordered_map<int, int> pre2in;
+        for (int i = 0;i < inorder.size(); i++) {
+            pre2in[inorder[i]] = i;
+        }
+        return buildSubtree(preorder, 0, preorder.size()-1, inorder, 0, inorder.size()-1, pre2in);
     }
 private:
-    TreeNode* dfs(vector<int>& preorder, int pl, int pr, vector<int>& inorder, int il, int ir) {
-        if (pl > pr || il > ir) {
-            return NULL;
+    TreeNode* buildSubtree(vector<int>& preorder, int ps, int pe, vector<int>& inorder, int is, int ie,                         unordered_map<int, int>& pre2in) {
+        if (ps > pe || is > ie) {
+            return nullptr;
         }
-        int i = 0;
-        for (i=il; i<=ir; i++) {
-            if (preorder[pl] == inorder[i]) {
-                break;
-            }
-        }
-        TreeNode* cur = new TreeNode(preorder[pl]);
-        cur->left = dfs(preorder, pl+1, pl+i-il, inorder, il, i-1);
-        cur->right = dfs(preorder, pl+i-il+1, pr, inorder, i+1, ir);
+        int inorderMiddle = pre2in[preorder[ps]];
+        int preorderMiddle = ps + (inorderMiddle - is);
+        TreeNode* cur = new TreeNode(preorder[ps]);
+        cur->left = buildSubtree(preorder, ps + 1, preorderMiddle, inorder, is, inorderMiddle-1, pre2in);
+        cur->right = buildSubtree(preorder, preorderMiddle + 1, pe, inorder, inorderMiddle + 1, ie, pre2in);
         return cur;
     }
 };
