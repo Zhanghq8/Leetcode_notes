@@ -5,7 +5,6 @@
 using namespace std;
 
 // DFS
-// track the index which start from at itself
 
 class Solution {
 public:
