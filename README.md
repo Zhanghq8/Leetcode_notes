@@ -19,7 +19,7 @@
 
 # DP
 [221_Maximal_Square](https://github.com/Zhanghq8/Leetcode_notes/tree/master/221_Maximal_Square),
-[674_Longest_Continuous_Increasing_Subsequence](https://github.com/Zhanghq8/Leetcode_notes/tree/master/674_Longest_Continuous_Increasing_Subsequence).
+[674_Longest_Continuous_Increasing_Subsequence](https://github.com/Zhanghq8/Leetcode_notes/tree/master/674_Longest_Continuous_Increasing_Subsequence),[377_Combination_Sum_IV](https://github.com/Zhanghq8/Leetcode_notes/tree/master/377_Combination_Sum_IV).
 
 # Sliding Window
 [674_Longest_Continuous_Increasing_Subsequence](https://github.com/Zhanghq8/Leetcode_notes/tree/master/674_Longest_Continuous_Increasing_Subsequence).
