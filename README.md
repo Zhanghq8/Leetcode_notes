@@ -7,7 +7,7 @@
 [934_Shortest_Bridge](https://github.com/Zhanghq8/Leetcode_notes/tree/master/934_Shortest_Bridge).
 
 # Stack
-[42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water).
+[42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water),[85_Maximal_Rectangle](https://github.com/Zhanghq8/Leetcode_notes/tree/master/85_Maximal_Rectangle).
 
 # Heap
 
