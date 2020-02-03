@@ -7,30 +7,15 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        if (s.size() == 1 || s.empty() == true) {
-            return s.size();
-        }
         int result = 0;
-        int start = 0;
-        int end = 0;
-        map<char, int> m;
-        while (end < s.size()) {
-            if (m.find(s[end]) != m.end()) {
-                if (m[s[end]] <start) {
-                    m[s[end]] = end;
-                }
-                else {
-                    result = max(end-start, result);
-                    start = m[s[end]] + 1; 
-                    m[s[end]] = end;
-                }
+        unordered_map<char, int> data;
+        for (int j = 0, i = -1; j < s.size(); j++) {
+            if (data.count(s[j]) == 1) {
+                i = max(i, data[s[j]]);
             }
-            else {
-                m[s[end]] = end;
-            }
-            end++;
+            result = max(result, j - i);
+            data[s[j]] = j;
         }
-        result = max(end-start, result);
         return result;
     }
 };
