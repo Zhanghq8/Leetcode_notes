@@ -6,38 +6,32 @@ using namespace std;
 class Solution {
 public:
     int myAtoi(string str) {
-        if (str.empty()) {
-            return 0;
-        }  
+        int posSign = 1;
         int index = 0;
-        int sign = 1;
-        bool end_flag = false;
         int result = 0;
-        while(index<str.size() && str[index] == ' ') {
+        while (str[index] == ' ') {
             index++;
         }
-        if (index<str.size() && (str[index] == '-' || str[index] == '+')) {
-            if (str[index] == '-') {
-                sign = -1;
+        if (str[index] == '-') {
+            posSign = -1;
+            index++;
+        } else if (str[index] == '+') {
+            index++;
+        } else if (str[index] - '0' < 0 || str[index] - '9' > 0) {
+            return result;
+        } 
+        for (int i = index; i < str.size(); i++) {
+            if (str[i] - '0' < 0 || str[i] - '9' > 0) {
+                return result * posSign;
             }
-            index++;
-        }
-        while (index<str.size() && str[index] >= '0' && str[index] <= '9') {
-            if (result > INT_MAX/10 && sign == 1) {
+            if ((result > INT_MAX/10 && posSign == 1) || (result == INT_MAX/10 && posSign == 1 && str[i] - '0' >= 8)) {
                 return INT_MAX;
-            }
-            else if (result > INT_MAX/10 && sign == -1){
+            } else if ((result > INT_MAX/10 && posSign == -1) || (result == INT_MAX/10 && posSign == -1 && str[i] - '0' >= 8)) {
                 return INT_MIN;
+            } else {
+                result = result * 10 + (str[i] - '0');
             }
-            else if (result == INT_MAX/10 && (str[index] - '0' >= 8 && sign == 1)) {
-                return INT_MAX;
-            }
-            else if (result == INT_MAX/10 && (str[index] - '0' >= 8 && sign == -1)) {
-                return INT_MIN;
-            }
-            result = result*10 + (str[index] - '0');
-            index++;
         }
-        return result*sign;
+        return result * posSign;
     }
 };
