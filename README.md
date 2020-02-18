@@ -12,7 +12,7 @@
 ## Heap
 
 ## Two pointers
-[42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water),[26_Remove_Duplicates_from_Sorted_Array](https://github.com/Zhanghq8/Leetcode_notes/tree/master/26_Remove_Duplicates_from_Sorted_Array).
+[42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water),[26_Remove_Duplicates_from_Sorted_Array](https://github.com/Zhanghq8/Leetcode_notes/tree/master/26_Remove_Duplicates_from_Sorted_Array),[141_Linked_List_Cycle](https://github.com/Zhanghq8/Leetcode_notes/tree/master/141_Linked_List_Cycle).
 
 ## Math
 [134_Gas_Station](https://github.com/Zhanghq8/Leetcode_notes/tree/master/134_Gas_Station),[121_Best_Time_to_Buy_and_Sell_Stock](https://github.com/Zhanghq8/Leetcode_notes/tree/master/121_Best_Time_to_Buy_and_Sell_Stock).
