@@ -19,25 +19,25 @@ public:
 class Solution {
 public:
     int getImportance(vector<Employee*> employees, int id) {
-        map<int, Employee*> info;
-        for (int i=0; i<employees.size(); i++) {
-            info[employees[i]->id] = employees[i];
+        if (employees.empty()) {
+            return 0;
         }
-        int imp = 0;
-        dfs(employees, info, id, imp);
-        return imp;
+        unordered_map<int, int> umap;
+        for (int i = 0; i < employees.size(); i++) {
+            umap[employees[i]->id] = i; 
+        }
+        int result = 0;
+        helper(employees, umap, id, result);
+        return result;
     }
 private:
-    void dfs(vector<Employee*>& employees, map<int, Employee*>& info, int id, int &imp) {
-        map<int, Employee*>::iterator target = info.find(id);
-        if (target->second->subordinates.size() == 0) {
-            imp += target->second->importance;
+    void helper(vector<Employee*>& employees, unordered_map<int, int>& umap, int id, int& result) {
+        result += employees[umap[id]]->importance;
+        if (employees[umap[id]]->subordinates.empty()) {
             return;
         }
-        imp += target->second->importance;
-        for (int i=0; i<target->second->subordinates.size(); i++) {
-            map<int, Employee*>::iterator sub = info.find(target->second->subordinates[i]);
-            dfs(employees, info, sub->second->id,imp);
+        for (int i = 0; i < employees[umap[id]]->subordinates.size(); i++) {
+            helper(employees, umap, employees[umap[id]]->subordinates[i], result);
         }
     }
 };
