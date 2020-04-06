@@ -1,7 +1,7 @@
 # Question
-The Tribonacci sequence T<sub>n<sub> is defined as follows: 
+The Tribonacci sequence T<sub>n</sub> is defined as follows: 
 
-T<sub>0<sub> = 0, T<sub>1<sub> = 1, T<sub>2<sub> = 1, and T<sub>n+3<sub> = T<sub>n<sub> + T<sub>n+1<sub> + T<sub>n+2<sub> for n >= 0.
+T<sub>0</sub> = 0, T<sub>1</sub> = 1, T<sub>2</sub> = 1, and T<sub>n+3</sub> = T<sub>n</sub> + T<sub>n+1</sub> + T<sub>n+2</sub> for n >= 0.
 
 Given n, return the value of Tn.
 
