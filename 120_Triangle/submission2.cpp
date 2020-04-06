@@ -12,14 +12,13 @@ public:
             return 0;
         }
         vector<vector<int>> memo(triangle.size(), vector<int> (triangle[triangle.size()-1].size(), -1));
-        return minsum(triangle, memo, 0, 0);
-        
+        return minsum(triangle, memo, 0, 0); 
     }
 private:
     int minsum(vector<vector<int>>& triangle, vector<vector<int>>& memo, int i, int j) {
         if (memo[i][j] != -1) {
             return memo[i][j];
-        }
+        }   
         if (i == triangle.size()-1) {
             return triangle[i][j];
         }
