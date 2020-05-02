@@ -25,7 +25,7 @@
 [674_Longest_Continuous_Increasing_Subsequence](https://github.com/Zhanghq8/Leetcode_notes/tree/master/674_Longest_Continuous_Increasing_Subsequence).
 
 ## Binary Search
-[4_Median_of_Two_Sorted_Arrays](https://github.com/Zhanghq8/Leetcode_notes/tree/master/4_Median_of_Two_Sorted_Arrays),[https://github.com/Zhanghq8/Leetcode_notes/tree/master/69_Sqrtx](69_Sqrtx),[https://github.com/Zhanghq8/Leetcode_notes/tree/master/278_First_Bad_Version](278_First_Bad_Version).
+[4_Median_of_Two_Sorted_Arrays](https://github.com/Zhanghq8/Leetcode_notes/tree/master/4_Median_of_Two_Sorted_Arrays),[https://github.com/Zhanghq8/Leetcode_notes/tree/master/69_Sqrtx](69_Sqrtx),[https://github.com/Zhanghq8/Leetcode_notes/tree/master/278_First_Bad_Version](278_First_Bad_Version),[https://github.com/Zhanghq8/Leetcode_notes/tree/master/378_Kth_Smallest_Element_in_a_Sorted_Matrix](378_Kth_Smallest_Element_in_a_Sorted_Matrix).
 
 
 ## Tree
