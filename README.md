@@ -7,7 +7,7 @@
 [934_Shortest_Bridge](https://github.com/Zhanghq8/Leetcode_notes/tree/master/934_Shortest_Bridge),[690_Employee_Importance](https://github.com/Zhanghq8/Leetcode_notes/tree/master/690_Employee_Importance),[752_Open_the_Lock](https://github.com/Zhanghq8/Leetcode_notes/tree/master/752_Open_the_Lock),[127_Word_Ladder](https://github.com/Zhanghq8/Leetcode_notes/tree/master/127_Word_Ladder),[773_Sliding_Puzzle](https://github.com/Zhanghq8/Leetcode_notes/tree/master/773_Sliding_Puzzle).
 
 ## Stack
-[42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water),[85_Maximal_Rectangle](https://github.com/Zhanghq8/Leetcode_notes/tree/master/85_Maximal_Rectangle).
+[42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water),[85_Maximal_Rectangle](https://github.com/Zhanghq8/Leetcode_notes/tree/master/85_Maximal_Rectangle),[402_Remove_K_Digits](https://github.com/Zhanghq8/Leetcode_notes/tree/master/402_Remove_K_Digits).
 
 ## Heap
 
