@@ -19,7 +19,7 @@ Input: root = [3,1,4,null,2], k = 1
  1   4
   \
    2
-Output: 1```
+Output: 1
 ```
 
 ## Constrains
