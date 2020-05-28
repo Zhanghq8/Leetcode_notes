@@ -8,18 +8,26 @@ class Solution {
 public:
     vector<int> findAnagrams(string s, string p) {
         vector<int> result;
-        vector<int> hashS(26, 0);
-        vector<int> hashP(26, 0);
+        vector<int> hash(26, 0);
         for (int i = 0; i < p.size(); i++) {
-            hashP[p[i] - 'a']++;
+            hash[p[i] - 'a']++;
         }
-        for (int i = 0; i < s.size(); i++) {
-            if (i >= p.size()) {
-                hashS[s[i - p.size()] - 'a']--;
+        int left = 0, right = 0;
+        int count = 0;
+        for (; right < s.size(); right++) {
+            hash[s[right] - 'a']--;
+            if (hash[s[right] - 'a'] >= 0) {
+                count++;
             }
-            hashS[s[i] - 'a']++;
-            if (hashS == hashP) {
-                result.push_back(i - p.size() + 1);
+            if (right >= p.size()) {
+                hash[s[left] - 'a']++;
+                if (hash[s[left] - 'a'] > 0) {
+                    count--;
+                }
+                left++;
+            }
+            if (count == p.size()) {
+                result.push_back(left);
             }
         }
         return result;
