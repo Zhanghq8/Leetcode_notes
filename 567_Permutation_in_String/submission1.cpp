@@ -7,17 +7,25 @@ using namespace std;
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
-        vector<int> hashS1(26, 0);
-        vector<int> hashS2(26, 0);
+        vector<int> hash(26, 0);
         for (int i = 0; i < s1.size(); i++) {
-            hashS1[s1[i] - 'a']++;
+            hash[s1[i] - 'a']++;
         }
-        for (int i = 0; i < s2.size(); i++) {
-            if (i >= s1.size()) {
-                hashS2[s2[i - s1.size()] - 'a']--;
+        int left = 0, right = 0;
+        int count = 0;
+        for (; right < s2.size(); right++) {
+            hash[s2[right] - 'a']--;
+            if (hash[s2[right] - 'a'] >= 0) {
+                count++;
             }
-            hashS2[s2[i] - 'a']++;
-            if (hashS1 == hashS2) {
+            if (right >= s1.size()) {
+                hash[s2[left] - 'a']++;
+                if (hash[s2[left] - 'a'] > 0) {
+                    count--;
+                }
+                left++;
+            }
+            if (count == s1.size()) {
                 return true;
             }
         }
