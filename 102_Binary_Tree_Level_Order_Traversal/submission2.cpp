@@ -14,25 +14,22 @@ using namespace std;
  */
 class Solution {
 public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
         vector<vector<int>> result;
-        int max_depth = -1;
-        dfs(root, 0, max_depth, result);
+        int level = 1;
+        helper(result, level, root);
         return result;
     }
-private: 
-    void dfs(TreeNode* root, int depth, int& max_depth, vector<vector<int>>& result) {
-        if (root == NULL) {
+    void helper(vector<vector<int>>& result, int level, TreeNode* root) {
+        if (!root) {
             return;
         }
-        if (depth > max_depth) {
-            max_depth = depth;
+        if (level > result.size()) {
             result.push_back({root->val});
+        } else {
+            result[level - 1].push_back(root->val);
         }
-        else {
-            result[depth].push_back(root->val);
-        }
-        dfs(root->left, depth+1, max_depth, result);
-        dfs(root->right, depth+1, max_depth, result);
+        helper(result, level + 1, root->left);
+        helper(result, level + 1, root->right);
     }
 };

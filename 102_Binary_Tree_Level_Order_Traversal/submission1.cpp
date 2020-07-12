@@ -15,28 +15,28 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
-        vector<vector<int>> result;
-        if (root == NULL) {
-            return result;
+        if (!root) {
+            return {};
         }
-        queue<TreeNode*> Q;
-        Q.push(root);
-        while (Q.empty() != true) {
-            int length = Q.size()-1;
-            vector<int> ele_samelevel;
-            while (length>=0) {
-                TreeNode* current = Q.front();
-                if (current->left != NULL) {
-                    Q.push(current->left);
+        vector<vector<int>> result;
+        queue<TreeNode*> sameLevelQueue;
+        sameLevelQueue.push(root);
+        while (!sameLevelQueue.empty()) {
+            vector<int> elements;
+            int length = sameLevelQueue.size();
+            while (length) {
+                TreeNode* front = sameLevelQueue.front();
+                sameLevelQueue.pop();
+                if (front->left) {
+                    sameLevelQueue.push(front->left);    
                 }
-                if (current->right != NULL) {
-                    Q.push(current->right);
+                if (front->right) {
+                    sameLevelQueue.push(front->right);    
                 }
-                ele_samelevel.push_back(current->val);
-                Q.pop();
+                elements.push_back(front->val);
                 length--;
             }
-            result.push_back(ele_samelevel);
+            result.emplace_back(elements);
         }
         return result;
     }
