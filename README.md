@@ -15,7 +15,7 @@
 [42_Trapping_Rain_Water](https://github.com/Zhanghq8/Leetcode_notes/tree/master/42_Trapping_Rain_Water),[26_Remove_Duplicates_from_Sorted_Array](https://github.com/Zhanghq8/Leetcode_notes/tree/master/26_Remove_Duplicates_from_Sorted_Array),[141_Linked_List_Cycle](https://github.com/Zhanghq8/Leetcode_notes/tree/master/141_Linked_List_Cycle),[142_Linked_List_Cycle_II](https://github.com/Zhanghq8/Leetcode_notes/tree/master/142_Linked_List_Cycle_II),[74_Sort_Colors](https://github.com/Zhanghq8/Leetcode_notes/tree/master/74_Sort_Colors).
 
 ## Math
-[134_Gas_Station](https://github.com/Zhanghq8/Leetcode_notes/tree/master/134_Gas_Station),[121_Best_Time_to_Buy_and_Sell_Stock](https://github.com/Zhanghq8/Leetcode_notes/tree/master/121_Best_Time_to_Buy_and_Sell_Stock),[1375_Bulb_Switcher_III](https://github.com/Zhanghq8/Leetcode_notes/tree/master/1375_Bulb_Switcher_III),[238_Product_of_Array_Except_Self](https://github.com/Zhanghq8/Leetcode_notes/tree/master/238_Product_of_Array_Except_Self).
+[134_Gas_Station](https://github.com/Zhanghq8/Leetcode_notes/tree/master/134_Gas_Station),[121_Best_Time_to_Buy_and_Sell_Stock](https://github.com/Zhanghq8/Leetcode_notes/tree/master/121_Best_Time_to_Buy_and_Sell_Stock),[1375_Bulb_Switcher_III](https://github.com/Zhanghq8/Leetcode_notes/tree/master/1375_Bulb_Switcher_III),[238_Product_of_Array_Except_Self](https://github.com/Zhanghq8/Leetcode_notes/tree/master/238_Product_of_Array_Except_Self),[520_Detect_Capital](https://github.com/Zhanghq8/Leetcode_notes/tree/master/520_Detect_Capital).
 
 ## DP
 [221_Maximal_Square](https://github.com/Zhanghq8/Leetcode_notes/tree/master/221_Maximal_Square),[300_Longest_Increasing_Subsequence](https://github.com/Zhanghq8/Leetcode_notes/tree/master/300_Longest_Increasing_Subsequence),
